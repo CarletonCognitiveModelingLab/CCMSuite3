@@ -200,12 +200,12 @@ class World:
             fh = self.height
             starty = 0
         else:
-            starty = (self.height - fh) / 2
+            starty = (self.height - fh) // 2 #use floor division in Python 3
         if fw > self.width:
             fw = self.width
             startx = 0
         else:
-            startx = (self.width - fw) / 2
+            startx = (self.width - fw) // 2 #use floor division in Python 3
 
         self.reset()
         for j in range(fh):
