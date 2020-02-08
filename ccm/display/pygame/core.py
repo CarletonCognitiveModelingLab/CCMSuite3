@@ -3,7 +3,7 @@ import time
 from ccm.display.pygame import render
 
 class PygameDisplay:
-    def __init__(self,obj,width=640,height=480,full=False,title='CCMSuite',background='#CCCCCC'):
+    def __init__(self,obj,width=640,height=480,full=False,title='CCMSuite3',background='#CCCCCC'):
         self.obj=obj
         self.title=title
         self.paused=False

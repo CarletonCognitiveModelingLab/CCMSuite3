@@ -10,7 +10,7 @@ class TkinterDisplay:
             TkinterDisplay.root=tkinter.Tk()
         return TkinterDisplay.root
             
-    def __init__(self,obj,width=640,height=480,full=False,title='CCMSuite',background='#CCCCCC'):
+    def __init__(self,obj,width=640,height=480,full=False,title='CCMSuite3',background='#CCCCCC'):
         self.obj=obj
         self.title=title
         self.paused=False
