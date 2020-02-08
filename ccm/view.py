@@ -82,7 +82,7 @@ def combine_args(args):
 
 def html(title,text):
     return T.html[
-              T.head[T.title["CCMSuite: %s"%title]],
+              T.head[T.title["CCMSuite3: %s"%title]],
               T.body[
                 T.h1[title],
                 T.hr,
