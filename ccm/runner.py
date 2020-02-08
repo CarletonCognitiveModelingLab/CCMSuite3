@@ -87,11 +87,11 @@ def ensure_backup(fn,lines):
     name=fn[:-3]+'/code.py'
     if not file_exists(fn[:-3]+'/'): os.makedirs(fn[:-3])
     if not file_exists(name):
-        f=file(name,'w')
+        f=open(name,'w')
         f.write(''.join(lines))
         f.close()
     else:
-        f=file(name)
+        f=open(name,'r')
         if lines!=f.readlines():
             f.close()
             t=os.stat(name).st_mtime
@@ -99,7 +99,7 @@ def ensure_backup(fn,lines):
             name2='%s/code-%s.py'%(fn[:-3],text)
             
             os.rename(name,name2)
-            f=file(name,'w')
+            f=open(name,'w')
             f.write(''.join(lines))
             f.close()
     
@@ -115,8 +115,8 @@ def run(_filename,_iterations=1,**settings):
     if not _filename.endswith('.py'): _filename+='.py'
     if not file_exists(_filename):
         raise 'Could not find file: %s'%_filename
-    
-    lines=file(_filename).readlines()
+
+    lines=open(_filename,'r').readlines()
     params,defaults,core_code=parse_code(lines)
     
     ensure_backup(_filename,lines)
@@ -140,7 +140,7 @@ def run(_filename,_iterations=1,**settings):
                 
         print(_filename,'%d/%d'%(i,_iterations),param_text)
         
-        f=file(fname,'w')
+        f=open(fname,'w')
         f.write(code)
         f.flush()
         

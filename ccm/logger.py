@@ -239,7 +239,7 @@ def finished(flush=True):
 
     if flush or time.time()-log.last_flush>10:
         for fn,data in pending_output:
-            f=file(fn,'w')
+            f=open(fn,'w')
             items=list(data.items())
             items.sort()
             for k,v in items:
