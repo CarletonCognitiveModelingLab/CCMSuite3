@@ -421,7 +421,7 @@ class Partial:
     memory.partials.append(self)
     
   def similarity(self,a,b,value):
-    import pdb; pdb.set_trace()
+    #import pdb; pdb.set_trace()
     self.sims[a,b]=value
     self.sims[b,a]=value
   
