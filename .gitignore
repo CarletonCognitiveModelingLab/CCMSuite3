@@ -107,3 +107,9 @@ venv.bak/
 .DS_Store
 .idea
 *.html
+
+# tmp files
+*~
+*.swp
+*.swo
+*.bak
